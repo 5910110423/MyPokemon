@@ -5,6 +5,8 @@
  */
 package mypokemon;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author NICK
@@ -35,7 +37,10 @@ public class StatMenu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("PokemonStat");
+        setTitle("MyPokemon 1.0");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons.png")));
+        setIconImages(null);
+        setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
                 formComponentHidden(evt);
@@ -67,6 +72,7 @@ public class StatMenu extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden

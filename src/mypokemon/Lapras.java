@@ -13,7 +13,7 @@ public class Lapras extends Pokemon implements Runnable,Swimmable{
 	private static final int maxGroupHealth = 200;
 	public Lapras(){
 		super("Lapras",
-		      (Math.random()*1000) % (maxGroupHealth+1));
+		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("tail whip");
 		this.untimatedSkill = PokemonSkill.getPokemonSkill("Water Pulse2");

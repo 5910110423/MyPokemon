@@ -9,10 +9,10 @@ package mypokemon;
  *
  * @author NICK
  */
-public class Pikachu extends Pokemon implements Runnable{
-	private static final int maxGroupHealth = 200;
-	public Pikachu(){
-		super("Picachu",
+public class Lucario extends Pokemon implements Runnable{
+    private static final int maxGroupHealth = 200;
+	public Lucario(){
+		super("Lucario",
 		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("Thunder Shock");
@@ -34,5 +34,6 @@ public class Pikachu extends Pokemon implements Runnable{
         public String getDetail(){
             return this.getName() + "\n" + this.getHealth();
         }
-}
 
+   
+}

@@ -3,15 +3,20 @@ package mypokemon;
 
 abstract class Pokemon{
 	public final double maxHealth;
-	protected double health;
+	protected double health,weigh;
 	protected String name;
 	protected PokemonSkill attackSkill;
 	protected PokemonSkill untimatedSkill;
 
-	public Pokemon(String name, double maxHealth){
+	public Pokemon(String name, double maxHealth ,double weigh){
 		this.name = name;
+                this.weigh = weigh; 
 		this.health = maxHealth;
 		this.maxHealth = maxHealth;
+	}
+        
+        public double getWeigh(){
+		return this.weigh;
 	}
 
 	public double getHealth(){

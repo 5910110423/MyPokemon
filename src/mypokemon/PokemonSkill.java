@@ -9,7 +9,7 @@ package mypokemon;
  *
  * @author NICK
  */
-public class PokemonSkill{
+public class PokemonSkill {
 	private String name;
 	private float damage;
 
