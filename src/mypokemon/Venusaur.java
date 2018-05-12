@@ -9,18 +9,18 @@ package mypokemon;
  *
  * @author NICK
  */
-public class Lucario extends Pokemon implements Runnable{
+public class Venusaur extends Pokemon implements Runnable {
     private static final int maxGroupHealth = 200;
-	public Lucario(){
-		super("Lucario",
+	public Venusaur(){
+		super("Lapras",
 		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
-		this.attackSkill = PokemonSkill.getPokemonSkill("Thunder Shock");
-		this.untimatedSkill = PokemonSkill.getPokemonSkill("Thunderbolt");
+		this.attackSkill = PokemonSkill.getPokemonSkill("tail whip");
+		this.untimatedSkill = PokemonSkill.getPokemonSkill("Water Pulse2");
 	}
 
 	public void move(){
-		this.run();
+		this.swim();
 	}
 
 	public void run(){
@@ -31,9 +31,9 @@ public class Lucario extends Pokemon implements Runnable{
 		this.reducedHealth(1);
 	}
         
-        public String getDetail(){
-            return this.getName() + "\n" + this.getHealth();
-        }
-
-   
+        public void swim(){
+		this.reducedHealth(5);
+	}
+        
+    
 }

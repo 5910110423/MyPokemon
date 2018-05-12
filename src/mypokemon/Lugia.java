@@ -5,13 +5,10 @@
  */
 package mypokemon;
 
-/**
- *
- * @author NICK
- */
-public class Lapras extends Pokemon implements Runnable,Swimmable{
-	private static final int maxGroupHealth = 200;
-	public Lapras(){
+
+public class Lugia extends Pokemon implements Runnable {
+    private static final int maxGroupHealth = 200;
+	public Lugia(){
 		super("Lapras",
 		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
@@ -35,5 +32,5 @@ public class Lapras extends Pokemon implements Runnable,Swimmable{
 		this.reducedHealth(5);
 	}
         
+    
 }
-
