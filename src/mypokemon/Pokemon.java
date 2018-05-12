@@ -3,20 +3,24 @@ package mypokemon;
 
 abstract class Pokemon{
 	public final double maxHealth;
-	protected double health,weigh;
+	protected double health,weight;
 	protected String name;
 	protected PokemonSkill attackSkill;
 	protected PokemonSkill untimatedSkill;
 
-	public Pokemon(String name, double maxHealth ,double weigh){
+	public Pokemon(String name, double maxHealth ,double weight){
 		this.name = name;
-                this.weigh = weigh; 
+                this.weight = weight; 
 		this.health = maxHealth;
 		this.maxHealth = maxHealth;
 	}
         
-        public double getWeigh(){
-		return this.weigh;
+        public double getWeight(){
+		return this.weight;
+	}
+        
+        public void setWeight(double weight){
+		this.weight = weight;
 	}
 
 	public double getHealth(){
@@ -31,6 +35,7 @@ abstract class Pokemon{
 		this.health += berry.getRestoreValue();
 		if(this.health > this.maxHealth)
 			this.health = this.maxHealth;
+                this.weight+= berry.getRestoreValue()/5.0;
 	}
 
 	public void attack(Pokemon rival){
