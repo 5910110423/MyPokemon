@@ -6,10 +6,10 @@
 package mypokemon;
 
 
-public class Lugia extends Pokemon implements Runnable {
+public class Lugia extends Pokemon {
     private static final int maxGroupHealth = 200;
 	public Lugia(){
-		super("Lapras",
+		super("Lugia",
 		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("tail whip");

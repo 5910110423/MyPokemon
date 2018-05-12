@@ -37,6 +37,17 @@ abstract class Pokemon{
 			this.health = this.maxHealth;
                 this.weight+= berry.getRestoreValue()/5.0;
 	}
+        
+        public void excercise(Excercise ex){
+            if(this.weight- (ex.getRestoreValue()/5.0) <0){
+                this.weight = 0;
+            }
+            else{
+                this.weight-= ex.getRestoreValue()/5.0;
+            }
+                
+	}
+        
 
 	public void attack(Pokemon rival){
 		rival.injure(this.attackSkill);

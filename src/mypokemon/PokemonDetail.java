@@ -28,9 +28,7 @@ public class PokemonDetail extends javax.swing.JFrame {
     }
     public void start(){
          initComponents();
-         this.setVisible(true);
-         Pikachu pikachu = new Pikachu();
-         
+         this.setVisible(true);         
     }
 
     /**
@@ -51,6 +49,8 @@ public class PokemonDetail extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
@@ -61,7 +61,15 @@ public class PokemonDetail extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton5.setText("Battle");
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setText("Battle");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MyPokemon 1.0");
@@ -90,10 +98,11 @@ public class PokemonDetail extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 545, 111, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Walk", "Run", "Swim" }));
         getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 505, 106, -1));
 
-        jButton3.setText("Run");
+        jButton3.setText("Excercise");
+        jButton3.setToolTipText("");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -111,6 +120,24 @@ public class PokemonDetail extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 286, 570, 206));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, 260));
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setText("BACK");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 100, 60));
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton7.setText("Battle");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, 100, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/pic/BG11.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -143,6 +170,51 @@ public class PokemonDetail extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+       String type = jComboBox1.getSelectedItem().toString();
+        String typeExcercise = jComboBox3.getSelectedItem().toString();
+        
+       switch(type){
+            case "Pikachu" : 
+                        switch(typeExcercise){
+                            case "Walk" :  pokemons.get(0).excercise(new Excercise(0));
+                                            jTextArea1.setText(printPokemons(pokemons,0));
+                                            break;
+                            case "Run" : pokemons.get(0).excercise(new Excercise(1));
+                                                jTextArea1.setText(printPokemons(pokemons,0));
+                                                break;
+                            case "Swim" : pokemons.get(0).excercise(new Excercise(2));
+                                                jTextArea1.setText(printPokemons(pokemons,0));
+                                                break;
+                        }
+                        break;
+            case "Lugia" : 
+                        switch(typeExcercise){
+                            case "Walk" :  pokemons.get(1).excercise(new Excercise(0));
+                                            jTextArea1.setText(printPokemons(pokemons,1));
+                                            break;
+                            case "Run" : pokemons.get(1).excercise(new Excercise(1));
+                                                jTextArea1.setText(printPokemons(pokemons,1));
+                                                break;
+                            case "Swim" : pokemons.get(1).excercise(new Excercise(2));
+                                                jTextArea1.setText(printPokemons(pokemons,1));
+                                                break;
+                        }
+                        break;
+            case "Venusaur" : 
+                        switch(typeExcercise){
+                            case "Walk" :  pokemons.get(2).excercise(new Excercise(0));
+                                            jTextArea1.setText(printPokemons(pokemons,2));
+                                            break;
+                            case "Run" : pokemons.get(2).excercise(new Excercise(1));
+                                                jTextArea1.setText(printPokemons(pokemons,2));
+                                                break;
+                            case "Swim" : pokemons.get(2).excercise(new Excercise(2));
+                                                jTextArea1.setText(printPokemons(pokemons,2));
+                                                break;
+                        }
+                        break;
+       }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -193,6 +265,22 @@ public class PokemonDetail extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        StartMenu menu;
+        menu = new StartMenu();
+        menu.startMe();
+         this.dispose();  
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        Battle battle = new Battle();
+        battle.startMe();
+         this.dispose(); 
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments*/
 
@@ -201,6 +289,10 @@ public class PokemonDetail extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;

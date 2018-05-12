@@ -9,7 +9,7 @@ package mypokemon;
  *
  * @author NICK
  */
-public class Pikachu extends Pokemon implements Runnable{
+public class Pikachu extends Pokemon {
 	private static final int maxGroupHealth = 200;
 	public Pikachu(){
 		super("Picachu",

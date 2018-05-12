@@ -9,7 +9,7 @@ package mypokemon;
  *
  * @author NICK
  */
-public class Venusaur extends Pokemon implements Runnable {
+public class Venusaur extends Pokemon {
     private static final int maxGroupHealth = 200;
 	public Venusaur(){
 		super("Lapras",
