@@ -12,11 +12,11 @@ package mypokemon;
 public class Venusaur extends Pokemon {
     private static final int maxGroupHealth = 200;
 	public Venusaur(){
-		super("Lapras",
+		super("Venusaur",
 		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000) % (100+1));
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("tail whip");
-		this.untimatedSkill = PokemonSkill.getPokemonSkill("Water Pulse2");
+		this.untimatedSkill = PokemonSkill.getPokemonSkill("Water Pulse");
 	}
 
 	public void move(){

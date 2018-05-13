@@ -1,23 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mypokemon;
 
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author NICK
- */
+
 public class StartMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form StatMenu
-     */
+  
     public StartMenu() {
         
     }
@@ -53,7 +44,7 @@ public class StartMenu extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Arabica", 1, 24)); // NOI18N
         jButton1.setText("welcome");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,11 +53,11 @@ public class StartMenu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, 130, 60));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("ชื่อเทรนเนอร์");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 200, 40));
+        jLabel1.setFont(new java.awt.Font("Arabica", 1, 36)); // NOI18N
+        jLabel1.setText("Your name");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 160, 40));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Arabica", 1, 18)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -75,7 +66,8 @@ public class StartMenu extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 430, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/pic/BG2.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 800, 600));
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
         setLocationRelativeTo(null);
@@ -89,9 +81,10 @@ public class StartMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         PokemonDetail Detail = new PokemonDetail();
         Detail.start();
+        this.dispose();
         final ImageIcon icon = new ImageIcon(getClass().getResource("pic/icon1.png"));
         JOptionPane.showMessageDialog(null,"ยินดีต้อนรับคุณ"+" "+jTextField1.getText()+" "+"เข้าสู่ My pokemon","ยินดีต้อนรับสู่ My pokemon",JOptionPane.INFORMATION_MESSAGE,icon);
-        this.dispose();
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
