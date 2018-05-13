@@ -152,7 +152,7 @@ public class PokemonDetail extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 100, 60));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/icon.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/pic/PokemonIcon.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 220, 180));
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -164,7 +164,7 @@ public class PokemonDetail extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, 100, 60));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/icon.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/pic/PokemonIcon.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 220, 180));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pikachu", "Lugia", "Venusaur" }));
@@ -204,11 +204,11 @@ public class PokemonDetail extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("HP");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 230, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 230, 30));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("HP");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 30));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 240, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mypokemon/pic/BG11.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
